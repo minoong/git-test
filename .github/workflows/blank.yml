@@ -13,7 +13,7 @@ jobs:
   build:
     if: |
       github.event.pull_request.merged == true &&
-      contains(github.event.labels.*.name, 'bug')
+      contains(github.event.pull_request.labels.*.name, 'bug')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
