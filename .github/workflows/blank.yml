@@ -21,8 +21,9 @@ jobs:
         run: echo Hello, world!
 
       - name: Merge main -> stage
-        uses: devmasx/merge-branch@master
+        uses: everlytic/branch-merge@1.1.2
         with:
+          github_token: ${{ secrets.TOKEN }}
           from_branch: main
           target_branch: stage
-          github_token: ${{ secrets.TOKEN }}
+          commit_message_template: "[Automated] Merged main into target stage"
