@@ -15,9 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Merge by labeled
-        uses: tukasz/direct-merge-action@master
+      - uses: actions/checkout@master
+
+      - name: Merge main -> staging
+        uses: devmasx/merge-branch@master
         with:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          source-branch: main
-          target-branch: stage
+          type: now
+          from_branch: main
+          target_branch: staging
+          github_token: ${{ secrets.TOKEN }}
+      # - name: Merge by labeled
+      #   uses: tukasz/direct-merge-action@master
+      #   with:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      #     source-branch: main
+      #     target-branch: stage
