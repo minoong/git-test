@@ -24,7 +24,7 @@ jobs:
           type: now
           from_branch: main
           target_branch: stage
-          github_token: ${{ secrets.TOKEN }}
+          # github_token: ${{ secrets.TOKEN }}
       # - name: Merge by labeled
       #   uses: tukasz/direct-merge-action@master
       #   with:
