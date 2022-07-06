@@ -20,9 +20,9 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Merge main -> staging
+      - name: Merge main -> stage
         uses: devmasx/merge-branch@master
         with:
           from_branch: main
-          target_branch: staging
+          target_branch: stage
           github_token: ${{ github.token }}
