@@ -15,10 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - uses: actions/checkout@master
 
       - name: Merge by labeled
         uses: devmasx/merge-branch@master
