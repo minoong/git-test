@@ -24,6 +24,6 @@ jobs:
         uses: everlytic/branch-merge@1.1.2
         with:
           github_token: ${{ secrets.TOKEN }}
-          from_branch: main
+          source_ref: main
           target_branch: stage
           commit_message_template: "[Automated] Merged main into target stage"
