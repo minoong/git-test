@@ -19,5 +19,5 @@ jobs:
         uses: tukasz/direct-merge-action@master
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          source-branch: master
+          source-branch: main
           target-branch: stage
